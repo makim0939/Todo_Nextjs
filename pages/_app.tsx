@@ -24,10 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
       const {data} = await axios.get(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/csrf`
       )
+      
       axios.defaults.headers.common['csrf-token'] = data.csrfToken//リクエストヘッダーにcsrf-tokenが乗るようにする。
     }
     getCsrfToken() //実行
-  })
+  }, [])
   return (
     <QueryClientProvider client={queryClient}>
       <MantineProvider

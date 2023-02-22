@@ -1,3 +1,5 @@
+//全てのページで共通して使えるレイアウト
+
 import {FC, ReactNode} from "react";
 import Head from "next/head";
 
