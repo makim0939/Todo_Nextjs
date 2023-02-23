@@ -10,6 +10,7 @@ import { useRouter } from 'next/router'
 import { useForm, yupResolver } from '@mantine/form'
 import { AuthForm } from '@/types'
 import { Layout } from '@/components/Layout'
+import { PrismaClient } from '@prisma/client'
 
 
 //入力のバリデーションのロジックをyupで実装。
@@ -24,6 +25,7 @@ const schema = Yup.object().shape({
     .required('No password provided')
     .min(8, 'Password should be min 5 chars'),
 });
+
 
 export default function Home() {
   const router = useRouter();//Next.jsのルーティング用

@@ -8,5 +8,5 @@ export type AuthForm = {
 export type EditedTask = {
     id: number
     title: string
-    discription?: string | null
+    description?: string | null
 }
