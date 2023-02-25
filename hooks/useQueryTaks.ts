@@ -7,7 +7,7 @@ import React from 'react'
 export const useQueryTaks = () => {
   const router = useRouter()
   const getTasks = async () => {
-    const { data } = await axios.get(`${process.env.NEXT_PUBLIC_URL}/todo`)
+    const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/todo`)
     return data
   }
 
